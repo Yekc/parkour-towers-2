@@ -33,8 +33,12 @@ Game.on("playerJoin", (player) => {
 world.bricks.filter(brick => brick.name?.startsWith("portal_")).forEach(brick => { 
     brick.touching(debouncePlayer((player) => {
         let spawn = world.bricks.find(b => b.name === `tower_${brick.name.split('_')[1]}_spawn`)
-        player.setPosition(new Vector3(spawn.center.x, spawn.center.y, spawn.center.z + 1))
-        player.centerPrint("Good luck! Type \\c7/spawn \\c0to go back to spawn.", 3)
+        if (spawn) {
+            player.setPosition(new Vector3(spawn.center.x, spawn.center.y, spawn.center.z + 1))
+            player.centerPrint("Good luck! Type \\c7/spawn \\c0to go back to spawn.", 3)
+        } else {
+            player.centerPrint("Coming soon... I hope", 2)
+        }
     }), 1000)
 })
 
