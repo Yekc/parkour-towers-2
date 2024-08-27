@@ -22,6 +22,12 @@ world.bricks.filter(brick => brick.name?.startsWith("portal_")).forEach(brick =>
     }), 1000)
 })
 
+//Brick rotations
+world.bricks.filter(brick => brick.name?.startsWith("ROTATED_")).forEach(brick => {
+    let split = brick.name.split('_')
+    brick.setRotation(new Vector3(parseInt(split[1]), parseInt(split[2]), parseInt(split[3])))
+})
+
 //Commands
 Game.command("spawn", (player, a) => {
     let spawn = world.bricks.find(b => b.name === "spawn")
