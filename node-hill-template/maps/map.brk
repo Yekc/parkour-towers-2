@@ -15,4 +15,5 @@ B R I C K  W O R K S H O P  V0.2.0.0
 	+NOCOLLISION
 3.5 -0.5 0.5 1 1 1 0.5 0.5 0.5 1
 	+NAME spawn
+	+ROT -270
 	+SHAPE spawnpoint
