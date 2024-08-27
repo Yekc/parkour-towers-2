@@ -6,9 +6,9 @@ Game.on("playerJoin", (player) => {
 })
 
 //Pain bricks
-world.bricks.filter(brick => brick.name === "hurt").forEach(brick => { 
+world.bricks.filter(brick => brick.name === "hurt").forEach(brick => {
     brick.touching(debouncePlayer((player) => {
-        player.health = player.health - 10
+        player.setHealth(player.health - 10)
     }), 100)
 })
 
