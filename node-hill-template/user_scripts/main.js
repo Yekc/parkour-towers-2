@@ -2,6 +2,7 @@
 Game.on("playerJoin", (player) => {
     player.message("\\c5Welcome to \\c7Parkour Towers 2\\c5!")
     player.message("Towers are ranked from: [#4fe647]Easy\\c0, [#fff94d]Intermediate\\c0, [#ffa747]Hard\\c0, [#f00d00]Very Hard\\c0, [#ff3bfc]Challenging\\c0, to [#4a4a4a]Insane\\c0.")
+    player.message("Type \\c7/spawn \\c0to go back to spawn.")
     player.message("Good luck!")
 })
 
@@ -21,7 +22,8 @@ world.bricks.filter(brick => brick.name?.startsWith("portal_")).forEach(brick =>
 })
 
 //Commands
-Game.command("lobby", (player, a) => {
+Game.command("spawn", (player, a) => {
     let spawn = world.bricks.find(b => b.name === "spawn")
     player.setPosition(new Vector3(spawn.center.x, spawn.center.y, spawn.center.z + 1))
+    player.message("\\c5You were teleported back to the lobby!")
 })
