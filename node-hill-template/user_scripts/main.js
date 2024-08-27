@@ -49,10 +49,10 @@ world.bricks.filter(brick => brick.name.includes("hurt")).forEach(brick => {
 world.bricks.filter(brick => brick.name?.startsWith("win_")).forEach(brick => { 
     brick.touching(debouncePlayer((player) => {
         let tower = brick.name.split('_')[1]
-        let spawn = world.bricks.find(b => b.name === `tower_${brick.name.split('_')[1]}_spawn`)
+        let spawn = world.bricks.find(b => b.name === "spawn")
         player.setPosition(new Vector3(spawn.center.x, spawn.center.y, spawn.center.z + 1))
         player.centerPrint(`\\c5Congratulations! You beat ${getColor(tower)}tower ${tower}!`, 3)
-        Game.messageAll(`\\c7${player.username} \\c5beat ${getColor(tower)}tower ${tower}`)
+        Game.messageAll(`\\c7${player.username} \\c5beat ${getColor(tower)}tower ${tower}!`)
     }), 1000)
 })
 
