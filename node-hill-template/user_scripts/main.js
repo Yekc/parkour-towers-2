@@ -19,3 +19,11 @@ world.bricks.filter(brick => brick.name?.startsWith("portal_")).forEach(brick =>
         player.setPosition(new Vector3(spawn.center.x, spawn.center.y, spawn.center.z + 1))
     }), 1000)
 })
+
+//Commands
+world.bricks.filter(brick => brick.name?.startsWith("portal_")).forEach(brick => { 
+    brick.touching(debouncePlayer((player) => {
+        let spawn = world.bricks.find(b => b.name === `tower_${brick.name.split('_')[1]}_spawn`)
+        player.setPosition(new Vector3(spawn.center.x, spawn.center.y, spawn.center.z + 1))
+    }), 1000)
+})
