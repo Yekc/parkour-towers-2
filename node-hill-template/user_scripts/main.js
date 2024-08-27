@@ -24,7 +24,7 @@ getColor = function(tower) {
 //Join messages
 Game.on("playerJoin", (player) => {
     player.message("\\c5Welcome to \\c7Parkour Towers 2\\c5!")
-    player.message("Towers are ranked from: [#4fe647]Easy\\c0, [#fff94d]Intermediate\\c0, [#ffa747]Hard\\c0, [#f00d00]Very Hard\\c0, [#ff3bfc]Challenging\\c0, to [#4a4a4a]Insane\\c0.")
+    player.message("Towers are ranked by difficulty in order. The difficulties are: [#4fe647]Easy\\c0, [#fff94d]Intermediate\\c0, [#ffa747]Hard\\c0, [#f00d00]Very Hard\\c0, [#ff3bfc]Challenging\\c0, and [#4a4a4a]Insane\\c0.")
     player.message("Type \\c7/spawn \\c0to go back to spawn.")
     player.message("Good luck!")
 })
