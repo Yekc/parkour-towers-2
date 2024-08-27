@@ -11,3 +11,10 @@ world.bricks.filter(brick => brick.name?.startsWith("hurt")).forEach(brick => {
         player.health -= 10
     }), 100)
 })
+
+//Teleporters
+world.bricks.filter(brick => brick.name?.startsWith("spawn_tower_")).forEach(brick => { 
+    brick.touching(debouncePlayer((player) => {
+        player.health -= 10
+    }), 100)
+})
