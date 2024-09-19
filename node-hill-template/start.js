@@ -1,7 +1,7 @@
 const nh = require("node-hill-s")
 
 nh.startServer({
-    hostKey: "yglj3B6kbAOaHHJuULtRii1f5bvwdhttoxi03gszTZYaLV9nvwwUObD5diIT9rDE", //MAIN
+    hostKey: "KWtPXIc8mwYHnddL9JjcI5mKp36vkzqNcCaeVqka2gxBRG9HKl84bjF1lfJ8hcSa", //MAIN
     //hostKey: "", //TESTING
 
     gameId: 69, //MAIN
@@ -13,7 +13,7 @@ nh.startServer({
 
     mapDirectory: "./maps/",
 
-    map: "map.brk",
+    map: "test.brk",
 
     scripts: "./user_scripts",
 
